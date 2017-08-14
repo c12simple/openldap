@@ -165,7 +165,7 @@ objectClass: person
 objectClass: top
 mail: complexID@test.com
 uid:: w7ZtYcOuw6Biw6liw6k=
-userPassword:: e3NoYTI1Nn1zRDNmUEtMbkZLWlVqblNWNHFBL1hvSk9xc21EZk5meFdjWjdrUHR
+userPassword:: UEBzc3cwcmQ=
  MYzBJPQ==
 sn:: w7ZtYcOuw6Biw6liw6k=
 memberOf: ou=devs02,ou=pluriel,ou=groups,dc=example,dc=org
