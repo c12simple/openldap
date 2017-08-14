@@ -38,7 +38,7 @@ if (($handle = fopen("/home/tran/mock.csv", "r")) !== FALSE) {
     echo "changetype: add\n";
     echo "objectClass: groupOfNames\n";
     echo "objectClass: top\n";
-    echo "ou: devs\n";
-    echo $members;
     echo "cn: devs\n";
+    echo $members;
+    echo "description: Global group\n";
 }
