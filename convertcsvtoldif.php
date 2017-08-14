@@ -34,7 +34,7 @@ if (($handle = fopen("/home/tran/mock.csv", "r")) !== FALSE) {
 
     fclose($handle);
 
-    echo "dn: ou=devs02,ou=pluriel,ou=groups,dc=example,dc=org\n";
+    echo "dn: cn=devs02,ou=pluriel,ou=groups,dc=example,dc=org\n";
     echo "changetype: add\n";
     echo "objectClass: groupOfNames\n";
     echo "objectClass: top\n";
