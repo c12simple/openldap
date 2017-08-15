@@ -1,7 +1,7 @@
 <?php
 
 $row = 1;
-$limit = 1200000;
+$limit = 1200;
 
 if (($handle = fopen("/home/tran/mock.csv", "r")) !== FALSE) {
     $members = "";
