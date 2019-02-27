@@ -23,6 +23,7 @@ if (($handle = fopen("/home/tran/mock.csv", "r")) !== FALSE) {
         echo "cn: ".$data[3]."\n";
         echo "mail: ".$data[1]."\n";
         echo "displayName: Name ".$data[3]."\n";
+        echo "employeeType: ".$data[4]."\n";
         echo "userPassword:: UEBzc3cwcmQ=\n";
         echo "\n";
         if ($row < 1020) {
