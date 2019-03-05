@@ -155,7 +155,7 @@ objectClass: top
 uniqueMember: cn=dev001,ou=dev,ou=staf,ou=people,dc=example,dc=org
 cn: Group010
 
-dn:: dWlkPcO2bWHDrsOgYsOpYsOpLG91PWRldixvdT1zdGFmZixvdT1wZW9wbGUsZGM9ZXhhbXBsZ
+dn: dWlkPcO2bWHDrsOgYsOpYsOpLG91PWRldixvdT1zdGFmZixvdT1wZW9wbGUsZGM9ZXhhbXBsZ
  SxkYz1vcmc=
 changetype: add
 displayName:: TmFtZSDDtm1hw67DoGLDqWLDqQ==
