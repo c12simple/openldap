@@ -155,18 +155,3 @@ objectClass: top
 uniqueMember: cn=dev001,ou=dev,ou=staf,ou=people,dc=example,dc=org
 cn: Group010
 
-dn: dWlkPcO2bWHDrsOgYsOpYsOpLG91PWRldixvdT1zdGFmZixvdT1wZW9wbGUsZGM9ZXhhbXBsZ
- SxkYz1vcmc=
-changetype: add
-displayName:: TmFtZSDDtm1hw67DoGLDqWLDqQ==
-objectClass: inetOrgPerson
-objectClass: organizationalPerson
-objectClass: person
-objectClass: top
-mail: complexID@test.com
-uid:: w7ZtYcOuw6Biw6liw6k=
-userPassword:: UEBzc3cwcmQ=
- MYzBJPQ==
-sn:: w7ZtYcOuw6Biw6liw6k=
-memberOf: ou=devs02,ou=pluriel,ou=groups,dc=example,dc=org
-cn:: w7ZtYcOuw6Biw6liw6k=
