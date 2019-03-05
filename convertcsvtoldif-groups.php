@@ -55,17 +55,19 @@ if (($handle = fopen("/home/tran/mock.csv", "r")) !== FALSE) {
     ///////////////////////////////
     if (($handle = fopen("/home/tran/mock.csv", "r")) !== FALSE) {
         $members = "";
-       
+ 
     $row = 1;
     while ((($data = fgetcsv($handle, 1000, ",")) !== FALSE) && ($row <= $limit)){
         $num = count($data);
         echo "# New entry \n";
+        $userDn = "";
         if ( isset($departMent[$data[5]]))
         {
-            echo "dn: uid=".$data[2].",ou=".$departMent[$data[5]].",ou=people,dc=example,dc=org\n";
+            $userDn = "uid=".$data[2].",ou=".$departMent[$data[5]].",ou=people,dc=example,dc=org\n";
         }else{
-            echo "dn: uid=".$data[2].",ou=staff,ou=people,dc=example,dc=org\n";
+            $userDn = "uid=".$data[2].",ou=staff,ou=people,dc=example,dc=org\n";
         }
+        echo "dn: ".$userDn;
         echo "changetype: add\n";
         echo "gidNumber: 0\n";
         echo "objectClass: inetOrgPerson\n";
@@ -87,6 +89,16 @@ if (($handle = fopen("/home/tran/mock.csv", "r")) !== FALSE) {
         }
         echo "userPassword:: UEBzc3cwcmQ=\n";
         echo "\n";
+
+        if ( isset($userTypeGroups[$data[4]]) )
+        {
+            echo "dn: cn=".$userTypeGroups[$data[4]].",ou=groups,dc=example,dc=org\n";
+            echo "changetype: modify\n";
+            echo "add: member\n";
+            echo "member: ".$userDn;            
+            echo "\n";
+        }
+        
         $row++;
     }
 
