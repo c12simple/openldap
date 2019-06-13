@@ -37,10 +37,8 @@ dn: cn=gunique,ou=groups,dc=example,dc=org
 changetype: modify
 add: uniqueMember
 uniqueMember: uid=nomuser01,ou=NoMemberOf,ou=people,dc=example,dc=org
--
 
 dn: cn=gunique,ou=groups,dc=example,dc=org
 changetype: modify
 add: uniqueMember
 uniqueMember: uid=nomuser02,ou=NoMemberOf,ou=people,dc=example,dc=org
--
