@@ -1,4 +1,4 @@
-NAME = c12simple/extend-osixia-openldap
+NAME = c12simple/openldap
 VERSION = 0.1.0
 
 .PHONY: all build build-nocache

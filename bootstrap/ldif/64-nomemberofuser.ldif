@@ -1,0 +1,46 @@
+dn: ou=NoMemberOf,ou=people,dc=example,dc=org
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+ou: NoMemberOf
+
+dn: cn=gunique,ou=groups,dc=example,dc=org
+changetype: add
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: gunique
+
+dn: uid=nomuser01,ou=NoMemberOf,ou=people,dc=example,dc=org
+changetype: add
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+mail: nomuser01@gmail.com
+uid: nomuser01
+userPassword:: UEBzc3cwcmQ=
+sn: No M User01
+cn: nomuser01
+
+dn: uid=nomuser02,ou=NoMemberOf,ou=people,dc=example,dc=org
+changetype: add
+displayName: No M User02
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: nomuser02
+sn: No M Uer02
+cn: nomuser01
+
+dn: cn=gunique,ou=groups,dc=example,dc=org
+changetype: modify
+add: uniqueMember
+uniqueMember: uid=nomuser01,ou=NoMemberOf,ou=people,dc=example,dc=org
+-
+
+dn: cn=gunique,ou=groups,dc=example,dc=org
+changetype: modify
+add: uniqueMember
+uniqueMember: uid=nomuser02,ou=NoMemberOf,ou=people,dc=example,dc=org
+-

@@ -1,4 +1,4 @@
-FROM osixia/openldap:1.1.9
+FROM osixia/openldap:latest
 MAINTAINER Simple <c12simple@gmail.com>
 
 ADD bootstrap /container/service/slapd/assets/config/bootstrap

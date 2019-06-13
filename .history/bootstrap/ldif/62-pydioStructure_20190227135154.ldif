@@ -1,0 +1,172 @@
+#!RESULT OK
+#!CONNECTION ldap://localhost:389
+#!DATE 2017-08-14T10:11:33.178
+dn: ou=people,dc=example,dc=org
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+ou: people
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:389
+#!DATE 2017-08-14T10:12:33.026
+dn: ou=visitor,ou=people,dc=example,dc=org
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+ou: visitor
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:389
+#!DATE 2017-08-14T10:12:55.907
+dn: ou=staff,ou=people,dc=example,dc=org
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+ou: staff
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:389
+#!DATE 2017-08-14T10:13:27.074
+dn: ou=dev,ou=staff,ou=people,dc=example,dc=org
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+ou: dev
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:389
+#!DATE 2017-08-14T10:13:50.030
+dn: ou=test,ou=staff,ou=people,dc=example,dc=org
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+ou: test
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:389
+#!DATE 2017-08-14T10:15:10.877
+dn: uid=dev001,ou=dev,ou=staff,ou=people,dc=example,dc=org
+changetype: add
+gidNumber: 0
+objectClass: posixAccount
+objectClass: top
+objectClass: account
+uidNumber: 1
+uid: dev001
+homeDirectory: /home/dev001
+cn: dev001
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:389
+#!DATE 2017-08-14T10:21:13.131
+dn: uid=dev002,ou=dev,ou=staff,ou=people,dc=example,dc=org
+changetype: add
+gidNumber: 0
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: posixAccount
+uidNumber: 2
+uid: dev002
+homeDirectory: dev002
+sn: DEV 002
+cn: dev002
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:389
+#!DATE 2017-08-14T10:40:05.236
+dn: uid=test001,ou=test,ou=staff,ou=people,dc=example,dc=org
+changetype: add
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: test001
+sn: test001
+cn: test001
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:389
+#!DATE 2017-08-14T10:43:45.812
+dn: ou=groups,dc=example,dc=org
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:389
+#!DATE 2017-08-14T10:44:54.164
+dn: ou=pluriel,ou=groups,dc=example,dc=org
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+ou: pluriel
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:389
+#!DATE 2017-08-14T10:45:34.461
+dn: ou=singular,ou=groups,dc=example,dc=org
+changetype: add
+objectClass: organizationalUnit
+objectClass: top
+ou: singular
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:389
+#!DATE 2017-08-14T10:46:33.630
+dn: cn=Group001,ou=pluriel,ou=groups,dc=example,dc=org
+changetype: add
+objectClass: groupOfNames
+objectClass: top
+member: uid=dev001,ou=dev,ou=staff,ou=people,dc=example,dc=org
+cn: Group001
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:389
+#!DATE 2017-08-14T10:46:48.046
+dn: cn=Group001,ou=pluriel,ou=groups,dc=example,dc=org
+changetype: modify
+add: member
+member: uid=test001,ou=test,ou=staff,ou=people,dc=example,dc=org
+-
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:389
+#!DATE 2017-08-14T10:47:41.463
+dn: ou=devs,ou=pluriel,ou=groups,dc=example,dc=org
+changetype: add
+objectClass: groupOfNames
+objectClass: top
+ou: devs
+member: uid=dev001,ou=dev,ou=staff,ou=people,dc=example,dc=org
+member: uid=dev002,ou=dev,ou=staff,ou=people,dc=example,dc=org
+cn: devs
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:389
+#!DATE 2017-08-14T10:49:28.559
+dn: cn=Group010,ou=singular,ou=groups,dc=example,dc=org
+changetype: add
+objectClass: groupOfUniqueNames
+objectClass: top
+uniqueMember: cn=dev001,ou=dev,ou=staf,ou=people,dc=example,dc=org
+cn: Group010
+
+dn: dWlkPcO2bWHDrsOgYsOpYsOpLG91PWRldixvdT1zdGFmZixvdT1wZW9wbGUsZGM9ZXhhbXBsZ
+ SxkYz1vcmc=
+changetype: add
+displayName:: TmFtZSDDtm1hw67DoGLDqWLDqQ==
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+mail: complexID@test.com
+uid:: w7ZtYcOuw6Biw6liw6k=
+userPassword:: UEBzc3cwcmQ=
+ MYzBJPQ==
+sn:: w7ZtYcOuw6Biw6liw6k=
+memberOf: ou=devs02,ou=pluriel,ou=groups,dc=example,dc=org
+cn:: w7ZtYcOuw6Biw6liw6k=
