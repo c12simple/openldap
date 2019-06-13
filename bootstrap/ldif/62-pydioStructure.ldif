@@ -152,6 +152,6 @@ dn: cn=Group010,ou=singular,ou=groups,dc=example,dc=org
 changetype: add
 objectClass: groupOfUniqueNames
 objectClass: top
-uniqueMember: cn=dev001,ou=dev,ou=staf,ou=people,dc=example,dc=org
+uniqueMember: cn=dev001,ou=dev,ou=staff,ou=people,dc=example,dc=org
 cn: Group010
 
