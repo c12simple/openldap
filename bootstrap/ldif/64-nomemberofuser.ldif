@@ -4,12 +4,6 @@ objectClass: organizationalUnit
 objectClass: top
 ou: NoMemberOf
 
-dn: cn=gunique,ou=groups,dc=example,dc=org
-changetype: add
-objectClass: groupOfUniqueNames
-objectClass: top
-cn: gunique
-
 dn: uid=nomuser01,ou=NoMemberOf,ou=people,dc=example,dc=org
 changetype: add
 objectClass: inetOrgPerson
@@ -33,12 +27,11 @@ uid: nomuser02
 sn: No M Uer02
 cn: nomuser01
 
-dn: cn=gunique,ou=groups,dc=example,dc=org
-changetype: modify
-add: uniqueMember
-uniqueMember: uid=nomuser01,ou=NoMemberOf,ou=people,dc=example,dc=org
 
 dn: cn=gunique,ou=groups,dc=example,dc=org
-changetype: modify
-add: uniqueMember
+changetype: add
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: gunique
+uniqueMember: uid=nomuser01,ou=NoMemberOf,ou=people,dc=example,dc=org
 uniqueMember: uid=nomuser02,ou=NoMemberOf,ou=people,dc=example,dc=org
